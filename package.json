@@ -18,7 +18,9 @@
     "dotenv": "^10.0.0",
     "env-var": "^7.1.1",
     "reflect-metadata": "^0.1.13",
-    "tsyringe": "^4.6.0"
+    "serialize-error": "^8.1.0",
+    "tsyringe": "^4.6.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@types/node": "^16.11.6",
