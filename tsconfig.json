@@ -5,6 +5,7 @@
     "noImplicitAny": true,
     "sourceMap": true,
     "strict": true,
+    "rootDir": "src",
     "outDir": "build",
     "emitDecoratorMetadata": true, // required
     "experimentalDecorators": true, // required
