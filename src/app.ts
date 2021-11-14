@@ -1,10 +1,14 @@
 import "reflect-metadata"; // required for reflection, don't remove
 import { Intents, Interaction } from 'discord.js';
-import { Client } from 'discordx';
+import { Client, DIService } from 'discordx';
 import { Environment } from './config/environment';
+import { container } from "tsyringe";
 
 
 const start = async () => {
+
+    setupDependencyInjection();
+
     const client = new Client({
         classes: [
             // glob string to load the classes. If you compile your bot, the file extension will be .js
@@ -35,6 +39,10 @@ const start = async () => {
     });
 
     await client.login(Environment.discordToken);
+}
+
+const setupDependencyInjection = () => {
+    DIService.container = container;
 }
 
 start()
